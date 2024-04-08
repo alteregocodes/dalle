@@ -24,6 +24,7 @@ async def image_response(update: Update, _: ContextTypes.DEFAULT_TYPE) -> None:
     chat_id = update.message.chat_id
     prompt = update.message.text
     logger.info(f"[{chat_id}] Generating image for prompt [{prompt}]")
+    await update.message.reply_text("Generating...")
     image_url = generate_image(prompt)
     logger.info(f"[{chat_id}] Generated [{image_url}]")
     await update.message.reply_photo(image_url)
