@@ -48,6 +48,13 @@ OPENAI_LOG='debug or info'
 
 
 
+## Commands
+
+* `/again` - generates new image for last received prompt
+* `/start` or `/help` - prints a simple start message
+
+
+
 ## Running the bot
 
 You can run the bot from the source code directly, or in a Docker container.
