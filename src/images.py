@@ -11,7 +11,7 @@ MODEL = getenv("OPENAI_MODEL")
 client = OpenAI(api_key=TOKEN)
 
 
-def generate_image(prompt: str) -> str | None:
+def generate_image(prompt: str) -> str:
     response = client.images.generate(
         model=MODEL,
         prompt=prompt,
