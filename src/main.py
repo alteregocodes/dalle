@@ -38,7 +38,7 @@ async def regenerate_image(update: Update, context: ContextTypes.DEFAULT_TYPE) -
 async def _generate_image(update: Update, prompt: str) -> None:
     chat_id = update.message.chat_id
     logger.info(f"[{chat_id}] Generating image for prompt [{prompt}]")
-    await update.message.reply_text(f"Generating...")
+    await update.message.reply_text("Generating...")
     image_url = await generate_image(prompt)
     logger.info(f"[{chat_id}] Generated [{image_url}]")
     await update.message.reply_photo(image_url)
